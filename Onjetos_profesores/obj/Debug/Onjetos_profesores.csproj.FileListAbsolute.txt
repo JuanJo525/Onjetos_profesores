@@ -1,0 +1,7 @@
+C:\Users\Juan\source\repos\Herramientas 2\Onjetos_profesores\Onjetos_profesores\bin\Debug\Onjetos_profesores.exe.config
+C:\Users\Juan\source\repos\Herramientas 2\Onjetos_profesores\Onjetos_profesores\bin\Debug\Onjetos_profesores.exe
+C:\Users\Juan\source\repos\Herramientas 2\Onjetos_profesores\Onjetos_profesores\bin\Debug\Onjetos_profesores.pdb
+C:\Users\Juan\source\repos\Herramientas 2\Onjetos_profesores\Onjetos_profesores\obj\Debug\Onjetos_profesores.csproj.AssemblyReference.cache
+C:\Users\Juan\source\repos\Herramientas 2\Onjetos_profesores\Onjetos_profesores\obj\Debug\Onjetos_profesores.csproj.CoreCompileInputs.cache
+C:\Users\Juan\source\repos\Herramientas 2\Onjetos_profesores\Onjetos_profesores\obj\Debug\Onjetos_profesores.exe
+C:\Users\Juan\source\repos\Herramientas 2\Onjetos_profesores\Onjetos_profesores\obj\Debug\Onjetos_profesores.pdb
