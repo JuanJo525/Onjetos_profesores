@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -75,7 +76,98 @@ namespace Onjetos_profesores
             }
         }
 
+        public void modificar(string cedula)
+        {
+            Cls_Profe P = ListaProfes.Find(x => x.Cedula == cedula);
+            if (P != null)
+            {
+                int modi = 1;
 
+                while (modi != 0)
+                {
+                    Console.Clear();
+                    P.info();
+                    Console.WriteLine("Ingrese el numero de la propiedad a modificar");
+                    Console.WriteLine("1. Nombre");
+                    Console.WriteLine("2. Apellido");
+                    Console.WriteLine("3. Cedula");
+                    Console.WriteLine("4. Dedicacion");
+                    if (P is Cls_Ordinario) {
+                        Console.WriteLine("5. Años de servicio");
+                    }
+
+                    if (P is Cls_Contratado)
+                    {
+                        Console.WriteLine("5. Fecha de ingreso");
+                        Console.WriteLine("6. Fecha de fin de contrato");
+                    }
+    
+                    Console.WriteLine("0. Salir");
+
+                    modi = Convert.ToInt32(Console.ReadLine());
+
+                    switch (modi)
+                    {
+                        case 1:
+                            Console.WriteLine("Ingrese el nuevo nombre");
+                            P.Nombre = Console.ReadLine();
+                            break;
+
+                        case 2:
+                            Console.WriteLine("Ingrese el nuevo apellido");
+                            P.Apellido = Console.ReadLine();
+                            break;
+
+                        case 3:
+                            Console.WriteLine("Ingrese la nueva cedula");
+                            P.Cedula = Console.ReadLine();
+                            break;
+
+                        case 4:
+                            Console.WriteLine("Ingrese la nueva dedicacion");
+                            P.Dedicacion = Console.ReadLine();
+                            break;
+
+                        case 5:
+                            if (P is Cls_Contratado)
+                            {
+                                Console.WriteLine("Ingrese la nueva fecha de ingreso");
+                                ((Cls_Contratado)P).F_Ingreso = Console.ReadLine();
+
+                            }
+
+                            if (P is Cls_Ordinario)
+                            {
+                                Console.WriteLine("Ingrese los nuevos años de servicio");
+                                ((Cls_Ordinario)P).Años_Servivcio = Convert.ToInt32(Console.ReadLine());
+                            }
+
+                            break;
+
+                        case 6:
+                            if (P is Cls_Contratado)
+                            {
+                                Console.WriteLine("Ingrese la nueva fecha de fin de contrato");
+                                ((Cls_Contratado)P).Fin_Contrato = Console.ReadLine();
+                            }
+                            break;
+
+                        case 0:
+                            Console.WriteLine("Regresano");
+                            break;
+                        default:
+                            Console.WriteLine("Opcion incorrecta");
+                            break;
+
+                    }
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("No se encontro el profesor");
+            }
+        }
     }
 
     public class Cls_Ordinario : Cls_Profe

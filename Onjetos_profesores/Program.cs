@@ -22,6 +22,7 @@ namespace Onjetos_profesores
                 Console.WriteLine("OPCION 2: ELIMINAR");
                 Console.WriteLine("OPCION 3: MODIFICAR");
                 Console.WriteLine("OPCION 4: CONSULTAR");
+                Console.WriteLine("OPCION 0: SALIR");
                 opcion = Convert.ToInt32(Console.ReadLine());
 
                 Console.Clear();
@@ -101,6 +102,10 @@ namespace Onjetos_profesores
 
                     case 3:
                         Console.WriteLine("opcion 3: Modificar");
+                        Console.WriteLine("Ingrese la cedula a modificar");
+                        cedula = Console.ReadLine();
+
+                        P.modificar(cedula);
                         break;
 
 
@@ -108,6 +113,14 @@ namespace Onjetos_profesores
                         Console.WriteLine("Opcion 4: Cosultar");
                         P.consulta();
                      break;
+
+                    case 0:
+                        Console.WriteLine("Saliendo");
+                        break;
+
+                    default:
+                        Console.WriteLine("Opcion incorrecta");
+                        break;
 
                 }
 
